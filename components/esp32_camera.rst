@@ -288,6 +288,28 @@ Configuration for TTGO-Camera Plus
       name: My Camera
       # ...
 
+Configuration for ESP32-Cam
+----------------------------------
+esp32_camera:
+   name: My Cam
+   external_clock:
+     pin: GPIO0
+     frequency: 20MHz
+   i2c_pins:
+     sda: GPIO26
+     scl: GPIO27
+   data_pins: [GPIO5, GPIO18, GPIO19, GPIO21, GPIO36, GPIO39, GPIO34, GPIO35]
+   vsync_pin: GPIO25
+   href_pin: GPIO23
+   pixel_clock_pin: GPIO22
+   power_down_pin: GPIO32
+   resolution: 800x600
+   test_pattern: false
+   vertical_flip: false
+   horizontal_mirror: false
+   max_framerate: 15 fps
+
+
 See Also
 --------
 
