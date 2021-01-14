@@ -439,6 +439,19 @@ You can then switch between these with three different actions:
             then:
               - display.page.show_next: my_display
               - component.update: my_display
+.. _logging:
+Logging
+-------
+
+To log when the display is drawn, you can use ESP_LOGD in your lambda. When the lambda code is called ESPHome will print to the debug log. e.g. at boot, or every time ``interval`` elapses, the message is show in ESPHome log output.
+ 
+    .. code-block:: yaml
+    
+        #Log to debug log when screen is drawn
+        lambda: |-
+          it.strftime(0, 0, id(my_font), "%I:%M", id(my_time).now());    // 09:52
+          ESP_LOGD("main", "Updating Screen");
+
 
 See Also
 --------
